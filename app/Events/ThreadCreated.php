@@ -10,19 +10,19 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class SomeEvent
+class ThreadCreated
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $foo;
+    public $thread;
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct($foo)
+    public function __construct($thread)
     {
-        $this->foo = $foo;
+        $this->thread = $thread;
     }
 
     /**
